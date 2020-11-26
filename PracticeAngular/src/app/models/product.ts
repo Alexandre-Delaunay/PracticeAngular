@@ -2,6 +2,6 @@ export class Product {
 
   constructor() {}
 
-  codeEdi : string;
-  comment: string;
+  codeEdi!: string;
+  comment!: string;
 }

@@ -7,11 +7,11 @@ export class Prescription {
 
   constructor() { }
 
-  referenceMimosa: string;
-  place: string;
-  date: string;
-  eyeAmetropy : EyeAmetropy;
-  ophthalmologist : Ophthalmologist;
-  optician: Optician;
-  product: Product;
+  referenceMimosa!: string;
+  place!: string;
+  date!: string;
+  eyeAmetropy!: EyeAmetropy;
+  ophthalmologist!: Ophthalmologist;
+  optician!: Optician;
+  product!: Product;
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PrescriptionService } from '../services/prescription.service';
+import { FormsModule } from '@angular/forms';
+
 import { Prescription } from '../models/prescription';
+import { PrescriptionService } from '../services/prescription.service';
 
 @Component({
   selector: 'app-search-prescription',
@@ -10,12 +12,21 @@ import { Prescription } from '../models/prescription';
 
 export class SearchPrescriptionComponent implements OnInit {
 
+  model = new Prescription();
+
   constructor(private prescriptionService: PrescriptionService) { }
 
   ngOnInit(): void {
   }
 
-  searchPrescription(): void {
-      Prescription prescription = this.prescriptionService.get(referenceMimosa);
-    };
+  searchPrescription() {
+
+    console.log("Call prescriptionService.Get");
+
+    this.prescriptionService.get(this.model.referenceMimosa).subscribe(
+      x => this.model = x
+    );
+
+    console.log(this.model)
+  }
 }

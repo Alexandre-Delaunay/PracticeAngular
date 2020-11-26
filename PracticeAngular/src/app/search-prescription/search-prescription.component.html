@@ -4,88 +4,92 @@
 <div class="container pt-5">
 
   <!-- Row -->
-  <div class="row">
-    <div class="col-xs align-self-center">
-      Ordonnance:
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs align-self-center">
+        Ordonnance:
+      </div>
+        <div class="col-sm">
+            <input [(ngModel)]="model.referenceMimosa" class="form-control form-control-sm w-100" type="text" placeholder="Entrez une référence Mimosa" name="referenceMimosa">
+            {{ model.referenceMimosa }}
+        </div>
+        <div class="col-sm">
+          <button (click)="searchPrescription()" class="btn btn-primary w-30">Rechercher</button>
+        </div>
     </div>
-    <div class="col-sm">
-        <input class="form-control form-control-sm w-100" type="text" placeholder="Entrez une référence Mimosa"
-          aria-label="Search">
-    </div>
-    <div class="col-sm">
-      <button (click)="searchPrescription()" type="button" class="btn btn-primary w-30">Rechercher</button>
-    </div>
-  </div>
 
-  <!-- Row -->
-  <div class="row pt-3">
-    <div class="col-xs">
-      Amétropie:
+    <!-- Row -->
+    <div class="row pt-3">
+      <div class="col-xs">
+        Amétropie:
+      </div>
+      <div class="col-sm">
+        {{ model?.eyeAmetropy?.sphere }} {{ model?.eyeAmetropy?.astigmatism[0] }} {{ model?.eyeAmetropy?.prismPrescription[0] }}
+      </div>
+      <div class="col-sm">
+      </div>
     </div>
-    <div class="col-sm">
 
+    <!-- Row -->
+    <div class="row pt-3">
+      <div class="col-xs">
+        Ophtalmologue:
+      </div>
+      <div class="col-sm">
+        {{ model?.ophthalmologist?.firstName }} {{ model?.ophthalmologist?.name }}
+      </div>
+      <div class="col-sm">
+      </div>
     </div>
-    <div class="col-sm">
-    </div>
-  </div>
 
-  <!-- Row -->
-  <div class="row pt-3">
-    <div class="col-xs">
-      Ophtalmologue:
+    <!-- Row -->
+    <div class="row pt-3">
+      <div class="col-xs">
+        Opticien:
+      </div>
+      <div class="col-sm">
+        {{ model?.optician?.firstName }} {{ model?.optician?.name }}
+      </div>
+      <div class="col-sm">
+      </div>
     </div>
-    <div class="col-sm">
 
+    <!-- Row -->
+    <div class="row pt-3">
+      <div class="col-xs">
+        Lieu:
+      </div>
+      <div class="col-sm">
+        {{ model?.place }}
+      </div>
+      <div class="col-sm">
+      </div>
     </div>
-    <div class="col-sm">
-    </div>
-  </div>
 
-  <!-- Row -->
-  <div class="row pt-3">
-    <div class="col-xs">
-      Opticien:
+    <!-- Row -->
+    <div class="row pt-3">
+      <div class="col-xs">
+        Date:
+      </div>
+      <div class="col-sm">
+        {{ model?.date }}
+      </div>
+      <div class="col-sm">
+      </div>
     </div>
-    <div class="col-sm">
 
+    <!-- Row -->
+    <div class="row pt-3">
+      <div class="col-xs">
+        Produit:
+      </div>
+      <div class="col-sm">
+        {{ model?.product?.codeEdi }}
+        <br>
+        {{ model?.product?.comment }}
+      </div>
+      <div class="col-sm">
+      </div>
     </div>
-    <div class="col-sm">
-    </div>
-  </div>
-
-  <!-- Row -->
-  <div class="row pt-3">
-    <div class="col-xs">
-      Lieu:
-    </div>
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-    </div>
-  </div>
-
-  <!-- Row -->
-  <div class="row pt-3">
-    <div class="col-xs">
-      Date:
-    </div>
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-    </div>
-  </div>
-
-  <!-- Row -->
-  <div class="row pt-3">
-    <div class="col-xs">
-      Produit:
-    </div>
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-    </div>
-  </div>
+</div>
 </div>
