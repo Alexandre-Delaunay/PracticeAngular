@@ -12,11 +12,13 @@ import { PrescriptionService } from '../services/prescription.service';
 
 export class SearchPrescriptionComponent implements OnInit {
 
+  astigmatism: any;
   model = new Prescription();
 
   constructor(private prescriptionService: PrescriptionService) { }
 
   ngOnInit(): void {
+
   }
 
   searchPrescription() {
