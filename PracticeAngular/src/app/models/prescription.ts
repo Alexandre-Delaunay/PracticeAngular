@@ -4,8 +4,7 @@ import { Optician } from './optician';
 import { Product } from './product';
 
 export class Prescription {
-
-  constructor() { }
+  constructor() {}
 
   referenceMimosa!: string;
   place!: string;

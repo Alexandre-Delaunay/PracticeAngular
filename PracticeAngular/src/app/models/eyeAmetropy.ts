@@ -1,5 +1,4 @@
 export class EyeAmetropy {
-
   constructor() {}
 
   id!: Int8Array;

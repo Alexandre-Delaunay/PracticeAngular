@@ -1,5 +1,4 @@
 export class Ophthalmologist {
-
   constructor() {}
 
   id!: Int8Array;

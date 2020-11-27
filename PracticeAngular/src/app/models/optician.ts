@@ -1,5 +1,4 @@
 export class Optician {
-
   constructor() {}
 
   id!: Int8Array;

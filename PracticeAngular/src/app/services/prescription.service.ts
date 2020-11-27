@@ -7,15 +7,13 @@ import { Prescription } from '../models/prescription';
 const apiUrl = 'https://localhost:44365/prescription';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PrescriptionService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   get(referenceMimosa: string): Observable<Prescription> {
-
-    console.log("From prescription service", referenceMimosa);
+    console.log('From prescription service', referenceMimosa);
 
     return this.http.get<Prescription>(`${apiUrl}/${referenceMimosa}`);
   }

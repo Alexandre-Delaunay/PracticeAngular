@@ -8,9 +8,8 @@ describe('SearchPrescriptionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchPrescriptionComponent ]
-    })
-    .compileComponents();
+      declarations: [SearchPrescriptionComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
